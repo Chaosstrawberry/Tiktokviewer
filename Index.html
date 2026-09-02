@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Watch TikTok videos directly in your browser."
+    >
+
+    <title>TikView</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="header">
+
+            <div class="brand">
+                <div class="brand-icon">T</div>
+
+                <span>TikView</span>
+            </div>
+
+            <div class="header-badge">
+                Web Video Player
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <section class="hero">
+
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    Works directly in your browser
+                </div>
+
+                <h1>
+                    Watch TikTok videos
+                    <span>without leaving the web.</span>
+                </h1>
+
+                <p>
+                    Paste a TikTok video link below and watch it
+                    directly on this page.
+                </p>
+
+
+                <div class="input-card">
+
+                    <div class="input-wrapper">
+
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                        </svg>
+
+                        <input
+                            id="urlInput"
+                            type="url"
+                            placeholder="Paste a TikTok video link..."
+                            autocomplete="off"
+                            spellcheck="false"
+                        >
+
+                        <button
+                            id="clearButton"
+                            class="clear-button hidden"
+                            type="button"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                    <button
+                        id="watchButton"
+                        class="watch-button"
+                        type="button"
+                    >
+                        Watch
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="error"
+                    class="error hidden"
+                ></div>
+
+
+                <div class="examples">
+
+                    <span>Example:</span>
+
+                    <button
+                        type="button"
+                        id="exampleButton"
+                    >
+                        Use a TikTok video link
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <section
+                id="viewerSection"
+                class="viewer-section hidden"
+            >
+
+                <div class="viewer-header">
+
+                    <div>
+                        <div class="viewer-label">
+                            NOW PLAYING
+                        </div>
+
+                        <h2>TikTok Video</h2>
+                    </div>
+
+                    <button
+                        id="newVideoButton"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        New video
+                    </button>
+
+                </div>
+
+
+                <div class="player-container">
+
+                    <iframe
+                        id="player"
+                        title="TikTok Video Player"
+                        allow="autoplay; encrypted-media; fullscreen"
+                        allowfullscreen
+                        scrolling="no"
+                        frameborder="0"
+                    ></iframe>
+
+                </div>
+
+
+                <div class="player-actions">
+
+                    <button
+                        id="copyButton"
+                        class="action-button"
+                        type="button"
+                    >
+                        Copy link
+                    </button>
+
+                    <button
+                        id="fullscreenButton"
+                        class="action-button"
+                        type="button"
+                    >
+                        Fullscreen
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <section class="features">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>Paste</h3>
+
+                        <p>
+                            Copy any supported TikTok video URL
+                            and paste it above.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        02
+                    </div>
+
+                    <div>
+                        <h3>Load</h3>
+
+                        <p>
+                            TikView detects the video ID and
+                            loads the web player.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        03
+                    </div>
+
+                    <div>
+                        <h3>Watch</h3>
+
+                        <p>
+                            Watch the video directly inside
+                            your browser.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer>
+
+            <span>TikView</span>
+
+            <span>•</span>
+
+            <span>Uses TikTok's official embedded player</span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
